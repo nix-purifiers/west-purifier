@@ -1,0 +1,52 @@
+{
+  "directories": {},
+  "entries": [
+    {
+      "git": {
+        "commitObject": {
+          "gitlinks": [],
+          "object": "dHJlZSBlYjc5YTk1ODkwMjJiYjY1OTFkZjg1NGRkZDczZDA4ZDQ5YzU0YjdjCnBhcmVudCAxYWEyZThmODA4NDljOTgzNDY2YjE2NWQ1MzU0MmRhOWIxYmQxYjMyCmF1dGhvciBQNHQgPHBhdHJ5a0BmYWxhLmVob3N0LnBsPiAxNjM0MjEyMjk4ICswMjAwCmNvbW1pdHRlciBHaXRIdWIgPG5vcmVwbHlAZ2l0aHViLmNvbT4gMTYzNDIxMjI5OCArMDIwMApncGdzaWcgLS0tLS1CRUdJTiBQR1AgU0lHTkFUVVJFLS0tLS0KIAogd3NCY0JBQUJDQUFRQlFKaGFCbktDUkJLN2hqNE92M3JJd0FBRVF3SUFEZlZtbE51OXBrTExsQ1BPOWtiRG5yWQogMktxR3lieXRIeitMdXlrYWJJWTBHZ0NrS2ZvWHVGeXZFRjJ0cStUMjR0eEhzZFlpZTQwZmlJRFNkODBoQkZYQQogZVBIa1hwZFJJYTR0SXdXT0NNQS9KYWFNWW4zUXJTUGdBZlFCNzNpc3paS0ozTkVuM05lRHdwL0gxL2pLanA0aQogSnkrQjl6eUVaNFo1eXVnRDBsV2lZaDFzTDNsVEpybi81bWFzT3pTTEdDQ2NNU3VjTXN4MHZBY0hacHZRUlFWSQogZTZUTU1ydVg0MlVTQ3BxMys3cWhVaG1waUt3WHlDOFR0VVo0QUdqVHFrNUxhRjluQ1lBbzBscEp1dlB4ejJzawogU0w4U1BxY1pzU3RadUZWTW5HR2ZEWGxWVTYvcDFSYXFCbzZ4dDhCemNSbVVvZk5WOHZyUFVQbFVac1hFODQ4PQogPTA1RWUKIC0tLS0tRU5EIFBHUCBTSUdOQVRVUkUtLS0tLQogCgpGaXggcG9zaXRpb24gb2YgYSBjb21tZW50IGluIHN0cmluZyBwYXJzaW5nCgpGaXhlcyAjMjE0"
+        },
+        "leaveDotGit": true,
+        "rev": "25647e692c7906b96ffd2b05ca54c097948e879c",
+        "submodules": false,
+        "url": "https://github.com/zserge/jsmn.git"
+      },
+      "hash": "sha256-t7wHIfMEKnPeLYuWZQAmL/xQtHWDgfZYjB+pkq7Kr6c=",
+      "path": "deps/jsmn",
+      "west": {
+        "name": "jsmn"
+      }
+    }
+  ],
+  "frozen": {
+    "manifest": {
+      "projects": [
+        {
+          "name": "jsmn",
+          "path": "deps/jsmn",
+          "revision": "25647e692c7906b96ffd2b05ca54c097948e879c",
+          "url": "https://github.com/zserge/jsmn.git"
+        }
+      ],
+      "self": {
+        "path": "app",
+        "west-commands": "west-commands.yml"
+      }
+    }
+  },
+  "inputs": {
+    "west.yml": {
+      "sha256": "90c8175edcbd38d52a6d904eeabcfca511d31c5c3da673dc02c8511c440f78d5"
+    }
+  },
+  "manifestFile": "west.yml",
+  "manifestPath": "app",
+  "nativeConfig": {
+    "file": "west.yml",
+    "path": "app"
+  },
+  "purifier": "west",
+  "sdk": "aa17b283e6d4d52392737ad0492c1c2330942b5a227ae5e5fcdc020c7898d881",
+  "version": 1
+}

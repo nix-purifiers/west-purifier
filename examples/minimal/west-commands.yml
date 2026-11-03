@@ -1,0 +1,6 @@
+west-commands:
+  - file: commands.py
+    commands:
+      - name: build
+        class: Build
+        help: Build this native example with CMake

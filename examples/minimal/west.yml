@@ -1,0 +1,8 @@
+manifest:
+  projects:
+    - name: jsmn
+      url: https://github.com/zserge/jsmn.git
+      revision: 25647e692c7906b96ffd2b05ca54c097948e879c
+      path: deps/jsmn
+  self:
+    west-commands: west-commands.yml

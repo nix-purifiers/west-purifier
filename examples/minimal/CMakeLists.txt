@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.20)
+project(west_purifier_example C)
+add_executable(answer main.c)
+target_include_directories(answer PRIVATE ${JSMN_SOURCE})
+install(TARGETS answer RUNTIME DESTINATION bin)

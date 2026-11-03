@@ -1,0 +1,10 @@
+result*
+cli
+__pycache__/
+*.pyc
+*.log
+/examples/minimal/build/
+/examples/minimal/*.pdf
+/examples/minimal/*.synctex.gz
+/.west/
+/examples/minimal/.west/
