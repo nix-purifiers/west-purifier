@@ -31,7 +31,7 @@
   installCommand ? ''cmake --install build --prefix "$out"'',
 }:
 let
-  lock = purifier.checkLock (import ./read-lock.nix { inherit lib; } { inherit src lockFile; });
+  lock = purifier.checkLock (import ../../lib-overlays/default/read-lock.nix { inherit lib; } { inherit src lockFile; });
   prepared = import ./environment.nix scope { inherit lock fetchers; };
   source = lib.cleanSourceWith {
     inherit src;
@@ -50,7 +50,7 @@ let
     chmod -R u+w source
     cd source
     mkdir -p "$out"
-    ${python3}/bin/python3 ${../west_purifier/layout.py} "$TMPDIR/workspace" "$PWD" ${prepared.output}/manifest.json \
+    ${python3}/bin/python3 ${../../west_purifier/layout.py} "$TMPDIR/workspace" "$PWD" ${prepared.output}/manifest.json \
       ${tool}/bin/west ${lib.escapeShellArgs command} > "$TMPDIR/build.log" 2>&1 || { cat "$TMPDIR/build.log"; exit 1; }
     ${installCommand}
     ${lib.optionalString doCheck checkCommand}
