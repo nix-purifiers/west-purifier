@@ -22,6 +22,6 @@ pkgs.lib.makeScope pkgs.newScope (scope: {
       patch = builtins.hashFile "sha256" ../native/patch-native.py;
     }
   );
-  cli = scope.callPackage ./cli.nix { inherit nixpkgsSrc purifierSrc; };
-  buildWestProject = scope.callPackage ./build-project.nix { };
+  cli = scope.callPackage ../pkgs/west-purifier/default.nix { inherit nixpkgsSrc purifierSrc; };
+  buildWestProject = scope.callPackage ../pkgs/build-west-project/default.nix { };
 })

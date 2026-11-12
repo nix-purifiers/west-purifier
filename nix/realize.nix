@@ -10,11 +10,11 @@ let
     inherit pkgs nixpkgsSrc;
     purifierSrc = /. + "@purifier@";
   };
-  lock = import ./read-lock.nix { inherit (pkgs) lib; } {
+  lock = import ../lib-overlays/default/read-lock.nix { inherit (pkgs) lib; } {
     src = /. + root;
     lockFile = /. + lockFile;
   };
-  environment = scope.callPackage ./environment.nix { } { inherit lock; };
+  environment = scope.callPackage ../pkgs/build-west-project/environment.nix { } { inherit lock; };
 in
 pkgs.writeText "west-environment-profile.json" (
   builtins.toJSON {

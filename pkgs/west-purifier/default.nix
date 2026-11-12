@@ -18,12 +18,12 @@
 stdenvNoCC.mkDerivation {
   pname = "west-purifier";
   version = "0.1.0";
-  src = ../.;
+  src = ../..;
   nativeBuildInputs = [ makeWrapper ];
   dontBuild = true;
   installPhase = ''
     mkdir -p "$out/bin" "$out/lib/west-purifier"
-    cp -r west_purifier nix native "$out/lib/west-purifier/"
+    cp -r west_purifier nix lib-overlays pkgs native "$out/lib/west-purifier/"
     install -m755 bin/west-purifier "$out/bin/west-purifier"
     for file in realize release; do
       substituteInPlace "$out/lib/west-purifier/nix/$file.nix" --replace-fail '@nixpkgs@' '${nixpkgsSrc}' --replace-fail '@purifier@' '${purifierSrc}'
